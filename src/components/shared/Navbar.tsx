@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -9,9 +10,12 @@ import {
 } from "../ui/navigation-menu";
 import { Switch } from "../ui/switch";
 import { Button } from "../ui/button";
-import { AiOutlineMenu } from "react-icons/ai";
+import { usePathname } from "next/navigation";
+import MobileMenu from "./MobileMenu";
 
 function Navbar() {
+  const pathname = usePathname();
+
   return (
     <header className="py-4 shadow-md">
       <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center  lg:px-g">
@@ -24,15 +28,27 @@ function Navbar() {
           <NavigationMenuList>
             {/* News Link */}
             <NavigationMenuItem className="flex items-center space-x-8">
-              <NavigationMenuLink asChild className="hover:text-red-500">
-                <Link href="/news">News</Link>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/news"
+                  className={`${
+                    pathname === "/news" ? "text-red-500 font-bold" : ""
+                  } hover:text-red-500`}
+                >
+                  News
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             {/* Services Dropdown with Clickable Link */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild className="hover:text-red-500">
-                <Link href="/services">
+                <Link
+                  href="/services"
+                  className={`${
+                    pathname === "/services" ? "text-red-500 font-bold" : ""
+                  } hover:text-red-500`}
+                >
                   <NavigationMenuTrigger className=" text-gray-700">
                     Services
                   </NavigationMenuTrigger>
@@ -62,13 +78,27 @@ function Navbar() {
             {/* About */}
             <NavigationMenuItem className="flex items-center space-x-8">
               <NavigationMenuLink asChild className="hover:text-red-500">
-                <Link href="/about">About</Link>
+                <Link
+                  href="/about"
+                  className={`${
+                    pathname === "/about" ? "text-red-500 font-bold" : ""
+                  } hover:text-red-500`}
+                >
+                  About
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
             {/* Contact */}
             <NavigationMenuItem className="flex items-center space-x-8">
               <NavigationMenuLink asChild className="hover:text-red-500">
-                <Link href="/contact">Contact</Link>
+                <Link
+                  href="/contact"
+                  className={`${
+                    pathname === "/contact" ? "text-red-500 font-bold" : ""
+                  } hover:text-red-500`}
+                >
+                  Contact
+                </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -84,11 +114,7 @@ function Navbar() {
         </div>
 
         {/* mobile hamber menu */}
-        <div className="lg:hidden">
-          <Button variant="default">
-            <AiOutlineMenu size={24} />
-          </Button>
-        </div>
+        <MobileMenu />
       </nav>
     </header>
   );
