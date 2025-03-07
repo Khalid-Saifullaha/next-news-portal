@@ -1,5 +1,10 @@
+import Banner from "@/components/shared/Banner";
 import Image from "next/image";
 
 export default function Home() {
-  return <div className="">Hello Next Js Devloper</div>;
+  return (
+    <div className="py-12">
+      <Banner />
+    </div>
+  );
 }
