@@ -1,12 +1,16 @@
 import React from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
+import bannerImg from "@/assests/banner.jpg";
 
 const Banner = () => {
   return (
     <div className="bg-slate-100">
-      <div className="px-4 py-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <div className="px-4 py-8 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         {/* image */}
-        <div>Image</div>
+        <div>
+          <Image src={bannerImg} alt="bannerImg" />
+        </div>
         <div className="space-y-4 flex flex-col">
           <h4 className="text-sm font-medium text-gray-500">Technology</h4>
           <h2 className="text-3xl font-bold">
