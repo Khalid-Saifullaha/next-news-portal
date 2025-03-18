@@ -17,7 +17,7 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="py-4 shadow-md">
+    <header className="py-4 shadow-md sticky top-0 bg-white z-50">
       <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center  lg:px-g">
         {/* Logo */}
         <div className="text-x font-bold">
