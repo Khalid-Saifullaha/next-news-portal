@@ -5,6 +5,7 @@ import React from "react";
 import newsImage from "@/assests/banner.jpg";
 import carImage from "@/assests/patrik-storm-alstra-pictures-eDyallVm_8A-unsplash.jpg";
 import jsImage from "@/assests/JavaScript-logo.png";
+import bannerImage from "@/assests/banner.jpg";
 import { Button } from "../ui/button";
 
 const NewsCard = () => {
@@ -70,6 +71,28 @@ const NewsCard = () => {
             Developers worldwide are excited about these enhancements.
           </p>
           <Link href="/news-details">
+            <Button variant="default">Read More</Button>
+          </Link>
+        </div>
+      </div>
+      <div className="border p-4 rounded-md shadow-md bg-white">
+        <Link href="/react-news">
+          <Image
+            src={bannerImage}
+            alt="React News Image"
+            className="mb-4 md:h-56 w-full object-cover rounded hover:scale-105 cursor-pointer transition-transform duration-200"
+          />
+        </Link>
+        <div>
+          <h2 className="text-xl font-semibold my-3 text-gray-900">
+            React 19 Beta Released: What Developers Need to Know
+          </h2>
+          <p className="mb-4 text-gray-700">
+            The React team has announced the beta release of React 19, bringing
+            exciting new features and improvements that will enhance developer
+            experience and app performance.
+          </p>
+          <Link href="/react-news">
             <Button variant="default">Read More</Button>
           </Link>
         </div>
