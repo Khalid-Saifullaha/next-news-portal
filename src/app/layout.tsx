@@ -79,17 +79,17 @@ export default function RootLayout({
             <div>
               <h2 className="text-xl font-bold mb-3">Contact Us</h2>
               <p className="text-gray-400 text-sm">
-                Email: contact@newsportal.com
+                Email: contact@dailynews.com
               </p>
               <p className="text-gray-400 text-sm">Phone: +123 456 7890</p>
               <p className="text-gray-400 text-sm">
-                Address: 123 News Street, City, Country
+                Address: 123 News Street, Mymenshing, Bangladesh
               </p>
             </div>
           </div>
 
           <div className="text-center mt-8 border-t border-gray-700 pt-4 text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} News Portal. All rights reserved.
+            &copy; {new Date().getFullYear()} Daily News. All rights reserved.
           </div>
         </footer>
       </body>
