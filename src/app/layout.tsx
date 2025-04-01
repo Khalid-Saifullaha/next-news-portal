@@ -32,7 +32,7 @@ export default function RootLayout({
         <main className="min-h-screen max-w-7xl mx-auto px-4 sm:px-6 lg:px-g">
           {children}
         </main>
-        <footer className="bg-gray-900 text-white py-8 mt-10">
+        <footer className="bg-gray-800 text-white py-8 mt-10">
           <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
             {/* About Section */}
             <div>
@@ -65,11 +65,6 @@ export default function RootLayout({
                 <li>
                   <a href="#" className="hover:text-gray-200">
                     Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-gray-200">
-                    Contact
                   </a>
                 </li>
               </ul>
