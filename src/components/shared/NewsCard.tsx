@@ -66,9 +66,9 @@ const NewsCard = () => {
             JavaScript's Latest Update Brings Performance Boost and New Features
           </h2>
           <p className="mb-4">
-            The latest update to JavaScript introduces improved performance and
-            several new built-in functions that make development more efficient.
-            Developers worldwide are excited about these enhancements.
+            The newest JavaScript update brings enhanced performance and several
+            new built-in functions, making development more efficient.
+            Developers around the world are excited about these improvements.
           </p>
           <Link href="/news-details">
             <Button variant="default">Read More</Button>
@@ -88,9 +88,9 @@ const NewsCard = () => {
             React 19 Beta Released: What Developers Need to Know
           </h2>
           <p className="mb-4 text-gray-700">
-            The React team has announced the beta release of React 19, bringing
-            exciting new features and improvements that will enhance developer
-            experience and app performance.
+            The React team has released the beta version of React 19,
+            introducing exciting new features and enhancements to improve
+            developer experience and application performance.
           </p>
           <Link href="/react-news">
             <Button variant="default">Read More</Button>
