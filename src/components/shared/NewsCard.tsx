@@ -4,8 +4,7 @@ import React from "react";
 
 import newsImage from "@/assests/banner.jpg";
 import carImage from "@/assests/patrik-storm-alstra-pictures-eDyallVm_8A-unsplash.jpg";
-import jsImage from "@/assests/JavaScript-logo.png";
-import bannerImage from "@/assests/banner.jpg";
+
 import { Button } from "../ui/button";
 
 const NewsCard = () => {
@@ -49,28 +48,6 @@ const NewsCard = () => {
             Professionally formulate wireless methods of.
           </p>
           <Link href="/">
-            <Button variant="default">Read More</Button>
-          </Link>
-        </div>
-      </div>
-      <div className="border p-4 rounded-md shadow-md">
-        <Link href="/news-details">
-          <Image
-            src={jsImage}
-            alt="JavaScript News Image"
-            className="mb-4 md:h-56 rounded hover:scale-105 cursor-pointer transition-all duration-200"
-          />
-        </Link>
-        <div>
-          <h2 className="text-xl font-semibold my-3">
-            JavaScript's Latest Update Brings Performance Boost and New Features
-          </h2>
-          <p className="mb-4">
-            The newest JavaScript update brings enhanced performance and several
-            new built-in functions, making development more efficient.
-            Developers around the world are excited about these improvements.
-          </p>
-          <Link href="/news-details">
             <Button variant="default">Read More</Button>
           </Link>
         </div>
