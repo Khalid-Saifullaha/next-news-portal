@@ -5,7 +5,7 @@ import bannerImg from "@/assests/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-200">
       <div className="px-4 py-8 lg:px-8 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         {/* image */}
         <div>
