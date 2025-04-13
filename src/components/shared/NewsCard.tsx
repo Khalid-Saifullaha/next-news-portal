@@ -9,7 +9,7 @@ import { Button } from "../ui/button";
 
 const NewsCard = () => {
   return (
-    <div className="">
+    <div className="bg-gray-50">
       <div className="border p-4 rounded-md shadow-md">
         <Link href="/">
           <Image
