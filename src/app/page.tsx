@@ -9,24 +9,31 @@ export default function Home() {
       <Banner />
 
       {/* Featured Section */}
-      <div className="my-12">
-        <h2 className="text-2xl font-bold mb-4">Featured</h2>
-        <div className="flex flex-col md:flex-row items-center gap-6 bg-gray-100 p-6 rounded-lg">
-          <div className="flex-1">
-            <h3 className="text-xl font-semibold mb-2">
+      <div className="my-16 px-4 md:px-8">
+        <h2 className="text-3xl font-bold text-center mb-10 text-purple-700">
+          🌟 Featured
+        </h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-8 bg-gradient-to-r from-purple-100 to-indigo-100 p-8 rounded-2xl shadow-lg transition duration-300 hover:shadow-2xl">
+          <div className="flex-1 space-y-4">
+            <h3 className="text-2xl font-semibold text-gray-800">
               Discover Something New
             </h3>
-            <p className="text-gray-700">
+            <p className="text-gray-600 leading-relaxed">
               Stay informed with our top story of the day. We bring you the
               latest insights, trending topics, and key updates that matter the
-              most.
+              most. Dive into stories that inspire and inform.
             </p>
+            <button className="mt-4 px-6 py-2 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition duration-300">
+              Read More
+            </button>
           </div>
+
           <div className="flex-1">
             <Image
               src={newsImage}
               alt="Featured news"
-              className="rounded-lg object-cover w-full h-auto"
+              className="rounded-xl w-full h-auto object-cover shadow-md hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
