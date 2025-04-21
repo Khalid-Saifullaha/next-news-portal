@@ -17,9 +17,8 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="py-4 shadow-md bg-white sticky top-0  z-50">
+    <header className="py-4 shadow-md bg-purple-600 sticky top-0  z-40">
       <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center  lg:px-g">
-        {/* Logo */}
         <div className="text-x font-bold">
           <Link href="/">Daily News</Link>
         </div>
@@ -104,7 +103,6 @@ function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* color switcher and login button */}
         <div className="hidden lg:flex items-center space-x-4">
           <div className="flex items-center">
             <span className="mr-2">Dark Mode</span>
