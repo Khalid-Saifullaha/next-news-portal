@@ -17,84 +17,100 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="py-4 shadow-md bg-purple-600 sticky top-0  z-40">
-      <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center  lg:px-g">
-        <div className="text-x font-bold">
+    <header className="py-4 shadow-md bg-purple-700 text-white sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center lg:px-6">
+        {/* Logo */}
+        <div className="text-2xl font-extrabold tracking-wide">
           <Link href="/">Daily News</Link>
         </div>
-        {/* desktop menu */}
+
+        {/* Desktop Menu */}
         <NavigationMenu className="hidden lg:flex">
-          <NavigationMenuList>
-            {/* News Link */}
-            <NavigationMenuItem className="flex items-center space-x-8">
+          <NavigationMenuList className="space-x-6">
+            <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   href="/news"
-                  className={`${
-                    pathname === "/news" ? "text-red-500 font-bold" : ""
-                  } hover:text-red-500`}
+                  className={`transition-colors duration-300 ${
+                    pathname === "/news"
+                      ? "text-yellow-300 font-bold"
+                      : "hover:text-yellow-200"
+                  }`}
                 >
                   News
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            {/* Services Dropdown with Clickable Link */}
+            {/* Services Dropdown */}
             <NavigationMenuItem>
-              <NavigationMenuLink asChild className="hover:text-red-500">
-                <Link
-                  href="/services"
-                  className={`${
-                    pathname === "/services" ? "text-red-500 font-bold" : ""
-                  } hover:text-red-500`}
-                >
-                  <NavigationMenuTrigger className=" text-gray-700">
-                    Services
-                  </NavigationMenuTrigger>
-                </Link>
-              </NavigationMenuLink>
-              <NavigationMenuContent>
-                <ul className="text-gray-600 shadow-md rounded-md px-5 py-4 space-y-2">
+              <NavigationMenuTrigger
+                className={`bg-transparent px-0 text-white hover:text-yellow-200 ${
+                  pathname === "/services" ? "text-yellow-300 font-bold" : ""
+                }`}
+              >
+                Services
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-white text-gray-800 p-4 rounded-md shadow-lg min-w-[220px]">
+                <ul className="space-y-2">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/services/web">Web Development</Link>
+                      <Link
+                        href="/services/web"
+                        className="block hover:text-purple-600"
+                      >
+                        Web Development
+                      </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/services/apps">Mobile App</Link>
+                      <Link
+                        href="/services/apps"
+                        className="block hover:text-purple-600"
+                      >
+                        Mobile App
+                      </Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link href="/services/seo">SEO</Link>
+                      <Link
+                        href="/services/seo"
+                        className="block hover:text-purple-600"
+                      >
+                        SEO
+                      </Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
 
-            {/* About */}
-            <NavigationMenuItem className="flex items-center space-x-8">
-              <NavigationMenuLink asChild className="hover:text-red-500">
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
                 <Link
                   href="/about"
-                  className={`${
-                    pathname === "/about" ? "text-red-500 font-bold" : ""
-                  } hover:text-red-500`}
+                  className={`transition-colors duration-300 ${
+                    pathname === "/about"
+                      ? "text-yellow-300 font-bold"
+                      : "hover:text-yellow-200"
+                  }`}
                 >
                   About
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
-            {/* Contact */}
-            <NavigationMenuItem className="flex items-center space-x-8">
-              <NavigationMenuLink asChild className="hover:text-red-500">
+
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
                 <Link
                   href="/contact"
-                  className={`${
-                    pathname === "/contact" ? "text-red-500 font-bold" : ""
-                  } hover:text-red-500`}
+                  className={`transition-colors duration-300 ${
+                    pathname === "/contact"
+                      ? "text-yellow-300 font-bold"
+                      : "hover:text-yellow-200"
+                  }`}
                 >
                   Contact
                 </Link>
@@ -103,15 +119,21 @@ function Navbar() {
           </NavigationMenuList>
         </NavigationMenu>
 
+        {/* Right-side controls */}
         <div className="hidden lg:flex items-center space-x-4">
-          <div className="flex items-center">
-            <span className="mr-2">Dark Mode</span>
+          <div className="flex items-center space-x-2">
+            <span className="text-sm">Dark Mode</span>
             <Switch />
           </div>
-          <Button variant="default">Login</Button>
+          <Button
+            variant="secondary"
+            className="bg-yellow-300 text-purple-800 hover:bg-yellow-400 transition"
+          >
+            Login
+          </Button>
         </div>
 
-        {/* mobile hamber menu */}
+        {/* Mobile Menu */}
         <MobileMenu />
       </nav>
     </header>
