@@ -17,7 +17,7 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="py-4 shadow-md bg-purple-700 text-white sticky top-0 z-50">
+    <header className="py-4 shadow-md bg-purple-800 text-white sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center lg:px-6">
         {/* Logo */}
         <div className="text-2xl font-extrabold tracking-wide">
@@ -112,7 +112,7 @@ function Navbar() {
                       : "hover:text-yellow-200"
                   }`}
                 >
-                  Contact
+                  Contact Us
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
