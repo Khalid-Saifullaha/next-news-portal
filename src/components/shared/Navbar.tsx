@@ -127,7 +127,7 @@ function Navbar() {
           </div>
           <Button
             variant="secondary"
-            className="bg-yellow-300 text-purple-800 hover:bg-yellow-400 transition"
+            className="bg-cyan-600 text-white hover:bg-cyan-500 cursor-pointer transition"
           >
             Login
           </Button>
