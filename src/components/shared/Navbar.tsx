@@ -16,6 +16,10 @@ import MobileMenu from "./MobileMenu";
 function Navbar() {
   const pathname = usePathname();
 
+  // Common link class for all menu items
+  const cleanLink =
+    "bg-transparent px-0 py-0 m-0 font-normal hover:bg-transparent focus:bg-transparent ring-0 focus:ring-0 focus:outline-none transition-colors duration-300";
+
   return (
     <header className="py-4 shadow-md bg-purple-800 text-white sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 flex justify-between items-center lg:px-6">
@@ -27,14 +31,15 @@ function Navbar() {
         {/* Desktop Menu */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList className="space-x-6">
+            {/* News */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   href="/news"
-                  className={`transition-colors duration-300 ${
+                  className={`${cleanLink} ${
                     pathname === "/news"
-                      ? "text-yellow-300 font-bold"
-                      : "hover:text-yellow-200"
+                      ? "text-white underline underline-offset-4"
+                      : "hover:text-pink-500"
                   }`}
                 >
                   News
@@ -45,8 +50,10 @@ function Navbar() {
             {/* Services Dropdown */}
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className={`bg-transparent px-0 text-white hover:text-yellow-200 ${
-                  pathname === "/services" ? "text-yellow-300 font-bold" : ""
+                className={`${cleanLink} ${
+                  pathname === "/services"
+                    ? "text-white underline underline-offset-4"
+                    : "hover:text-pink-500"
                 }`}
               >
                 Services
@@ -87,14 +94,15 @@ function Navbar() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
+            {/* About */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   href="/about"
-                  className={`transition-colors duration-300 ${
+                  className={`${cleanLink} ${
                     pathname === "/about"
-                      ? "text-yellow-300 font-bold"
-                      : "hover:text-yellow-200"
+                      ? "text-white underline underline-offset-4"
+                      : "hover:text-pink-500"
                   }`}
                 >
                   About
@@ -102,14 +110,15 @@ function Navbar() {
               </NavigationMenuLink>
             </NavigationMenuItem>
 
+            {/* Contact */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
                   href="/contact"
-                  className={`transition-colors duration-300 ${
+                  className={`${cleanLink} ${
                     pathname === "/contact"
-                      ? "text-yellow-300 font-bold"
-                      : "hover:text-yellow-200"
+                      ? "text-white underline underline-offset-4"
+                      : "hover:text-pink-500"
                   }`}
                 >
                   Contact Us
